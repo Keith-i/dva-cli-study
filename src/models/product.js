@@ -19,7 +19,7 @@ export default {
   },
 
   effects: {
-    *updateListAsync({payload, put}) {
+    *updateListAsync({payload}, {call, put}) {
       yield put({
         type: 'updateList',
         payload
