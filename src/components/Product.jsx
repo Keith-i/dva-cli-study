@@ -1,7 +1,19 @@
 import React from 'react'
 import { Link, withRouter, routerRedux } from 'dva/router'
+import * as api from '../services/example'
 
 class Product extends React.Component {
+
+  componentDidMount() {
+    // api.getProduct()
+    // .then(res => {
+    //   console.log(res)
+    // })
+    api.posts()
+    .then(res => {
+      console.log(res.data)
+    })
+  }
 
   clickProductList = (event) => {
 
